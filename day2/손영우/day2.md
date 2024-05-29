@@ -12,15 +12,13 @@
 - 진입점으로 main() 함수 사용.
 - print 함수로 값 출력.
 - 세미 콜론으로 코드 라인이 끝났음을 알림. 
-<pre>
-<code>
+```dart
 void main() {
   
 print("hello world");
   
 }
-</code>
-</pre>
+```
 
 ### 주석
 - 한줄 주석 //
