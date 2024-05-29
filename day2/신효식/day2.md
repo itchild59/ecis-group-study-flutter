@@ -12,7 +12,7 @@
     - 개발할때는 JIT, 배포할때는 AOT
 - 자바스크립트로 컴파일 지원
 - 백엔드 프로그래밍 가능
-### 1.2. 기초 문법: <a href="https://dartpad.dev" target="_blank">Dart Pad</a>
+### 1.2. 기초 문법: [https://dart.dev](https://dartpad.dev)
 1. main 함수
     ```dart
     void main() {
