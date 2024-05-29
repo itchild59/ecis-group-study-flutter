@@ -7,23 +7,23 @@
 웹 개발에 혼란을 가져온다는 여론을 극복하지 못하고 다트 언어를 자바스크립트로 완전 컴파일 하는데만 그침  
 
 다트 언어는 웹에서 자바스크립트를 대체하진 못했지만 현재 플러터의 인기에 모바일 영역에서 큰 각광을 받고 있음
-#
-다트의 장점과 특징
-- UI<sup>UserInterface</sup> 제작 최적화
-- 완전한 비동기 언어
-- 이벤트 기반
-- 아이솔레이트<sup>Isolate</sup> 를 이용한 동시성 기능 제공
-- 널 안정성<sup>Null Safety</sup>, 스프레드 기능<sup>Spread Operator</sup>, 컬렉션 if문<sup>Collection If</sup> 등 의 기능 제공  
-- 핫 리로드<sup>Hot reload</sup> 기능(개발 중간에 즉시 변경사항 확인)
-- 멀티 플랫폼에서 로깅 및 디버깅 지원
-- AOT 컴퍼일로 인한 모든 플랫폼에서의 빠른 속도
+
+- 다트의 장점과 특징
+  - UI<sup>UserInterface</sup> 제작 최적화
+  - 완전한 비동기 언어
+  - 이벤트 기반
+  - 아이솔레이트<sup>Isolate</sup> 를 이용한 동시성 기능 제공
+  - 널 안정성<sup>Null Safety</sup>, 스프레드 기능<sup>Spread Operator</sup>, 컬렉션 if문<sup>Collection If</sup> 등 의 기능 제공  
+  - 핫 리로드<sup>Hot reload</sup> 기능(개발 중간에 즉시 변경사항 확인)
+  - 멀티 플랫폼에서 로깅 및 디버깅 지원
+  - AOT 컴퍼일로 인한 모든 플랫폼에서의 빠른 속도
   - 효율성을 위해 개발할 때는 JIT<sup>Just In Time</sup> 방식, 배포할 때는 AOT<sup>Ahead of Time</sup> 방식 적용
-- 자바스크립트로의 완전한 컴파일
-- 백엔드 프로그래밍 지원
-#
+  - 자바스크립트로의 완전한 컴파일
+  - 백엔드 프로그래밍 지원
+
 ※ 교재를 참고할 때 도움이 되기 위해  
 중간에 불필요한 넘버링은 건너뛰고 섹션넘버링을 교재와 동일하게 유지하여 작성함
-#
+
 ### 1.3 기초 문법
 손쉽고 빠르게 코드를 실행해 볼 수 있는 DartPad 사이트  
 https://dartpad.dev/  
