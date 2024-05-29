@@ -19,7 +19,7 @@
 - **같이 공부 했던 내용을 주제로 토론**
 
 ## 데이터 공유 방법
-- git: (https://github.com/ddasix/ecis-group-study-flutter.git)
+- git: https://github.com/ddasix/ecis-group-study-flutter.git
     - markdown
 
 ## 순번
