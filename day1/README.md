@@ -12,7 +12,7 @@
     - Must Have 코드팩토리의 플러터 프로그래밍 Dart & Flutter 입문부터 실전에 유용한 10가지 앱 개발과 광고와 배포까지
     - 최지호 저 | 골든래빗
     ![Alt text](image.png)
-- 온라인강의
+- ~~온라인강의~~
 
 ## 스터디 방법
 - **돌아가면서 발표**
@@ -21,6 +21,10 @@
 ## 데이터 공유 방법
 - git: https://github.com/ddasix/ecis-group-study-flutter.git
     - markdown
+### git 관리툴
+- https://www.sourcetreeapp.com
+- https://desktop.github.com
+- https://www.gitkraken.com
 
 ## 순번
 1. 손영우(3장까지)
