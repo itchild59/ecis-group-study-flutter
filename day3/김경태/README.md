@@ -497,6 +497,8 @@
     ```dart
     import 'class_modifiers.dart';
 
+    void main() {}
+    
     //Parent child1 = Parent();             //인스턴스 불가
 
     //class Child2 extends Parent {}        //상속 불가
