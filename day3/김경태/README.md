@@ -143,21 +143,21 @@
     void main() {
         final controller = StreamController();
   
-    final stream = controller.stream.asBroadcastStream();
+        final stream = controller.stream.asBroadcastStream();
 
-    final streamListener1 = stream.listen((val) {
-        print('listening 1');
-        print(val);
-    });
+        final streamListener1 = stream.listen((val) {
+            print('listening 1');
+            print(val);
+        });
   
-    final streamListener2 = stream.listen((val) {
-        print('listening 2');
-        print(val);
-    });
+        final streamListener2 = stream.listen((val) {
+            print('listening 2');
+            print(val);
+        });
   
-    controller.sink.add(1);
-    controller.sink.add(2);
-    controller.sink.add(3);
+        controller.sink.add(1);
+        controller.sink.add(2);
+        controller.sink.add(3);
     }     
     ```
 #### 3.4.3 함수로 Stream 반환하기
