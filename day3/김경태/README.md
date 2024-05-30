@@ -29,9 +29,10 @@
  
         Future.delayed(Duration(seconds: 3), (){
         print('$number1 + $number2 = ${number1 + number2}');   //실행순서 3
-    });
+        });
 
-    print('$number1 + $number2 코드 실행 끝');                  //실행순서 2
+        print('$number1 + $number2 코드 실행 끝');              //실행순서 2
+    }
     ```
 ### 3.3 async와 await
 - `async` 와 `await` 키워드를 사용하면 비동기를 유지하면서 코드 가독성을 높일 수 있다.
