@@ -420,16 +420,26 @@
     Parent child1 = Parent();
 
     base class Child2 extends Parent {}
-    //class Child3 extends Parent {}
-    //class Child4 implements Parent {}  
+    //class Child3 extends Parent {}        //상속 불가
+    //class Child4 implements Parent {}     //재정의 불가
     ```  
 #### 4.4.2 final 제한자
+- 같은 파일에서 상속과 재정의 가능.
 - 외부 파일에서 해당 클래스의 상속과 구현 모두 불가.
   - class_modifiers.dart
     ```dart
     final class Parent {
         void say() {
             print('Parent say');
+        }
+    }
+
+    base class Child2 extends Parent {}
+
+    base class Child3 implements Parent {
+        @override
+        void say() {
+            print('Child3 say');
         }
     }    
     ```
@@ -443,8 +453,8 @@
 
     Parent child1 = Parent();
     
-    //class Child2 extends Parent {}
-    //class Child3 implements Parent {}  
+    //class Child2 extends Parent {}        //상속 불가
+    //class Child3 implements Parent {}     //재정의 불가
     ```
 #### 4.4.3 interface 제한자
 - 외부 파일에서 해당 클래스의 상속 불가, 재정의 가능.
@@ -469,7 +479,7 @@
 
     Parent child1 = Parent();
 
-    //class Child2 extends Parent {}
+    //class Child2 extends Parent {}        //상속 불가
     class Child3 implements Parent {
         @override
         void say() {
@@ -487,14 +497,14 @@
     ```dart
     import 'class_modifiers.dart';
 
-    Parent child1 = Parent();
+    //Parent child1 = Parent();             //인스턴스 불가
 
-    class Child2 extends Parent {}
+    //class Child2 extends Parent {}        //상속 불가
 
-    class Child3 implements Parent {}
+    //class Child3 implements Parent {}     //재정의 불가
     ```
 #### 4.4.5 mixin 제한자
-- 외부 파일에서 해당 클래스를 상속, 재정의, 인스턴스화 불가.
+- 다트 3.0 부터 클래스에 mixin 사용 가능.
   - main.dart
     ```dart
     void main() {
