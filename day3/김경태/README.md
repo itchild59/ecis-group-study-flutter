@@ -20,9 +20,9 @@
     ```
 2. `Future.delayed()` : 비동기 연산, 일정 시간 후에 콜백 함수를 실행할 수 있음.
     ```dart
-    void main()(
+    void main(){
         addNumbers(1, 1);
-    )
+    }
 
     void addNumbers(int number1, int number2){
         print('$number1 + $number2 계산 시작!');                //실행순서 1
