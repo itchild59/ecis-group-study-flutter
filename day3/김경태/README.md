@@ -10,7 +10,7 @@
 - 장점 : 응답 속도가 빠름, 자원을 효율적으로 사용할 수 있다.
 - 단점 : 코드 작성 및 이해가 복잡, 작업 순서를 제어하기 어려울 수 있다.
 ### 3.2 Future
-1. Future : List 나 Set 처럼 제네릭으로 어떤 미래의 값을 받아올지 정할 수 있는 클래스.
+1. `Future` : List 나 Set 처럼 제네릭으로 어떤 미래의 값을 받아올지 정할 수 있는 클래스.
     ```dart
     void main(){
         Future<String> name;    // 미래에 받을 String값
@@ -18,7 +18,7 @@
         Future<bool> isOpened;  // 미래에 받을 boolean값
     }
     ```
-2. Future.delayed() : 비동기 연산, 일정 시간 후에 콜백 함수를 실행할 수 있음.
+2. `Future.delayed()` : 비동기 연산, 일정 시간 후에 콜백 함수를 실행할 수 있음.
     ```dart
     void main()(
         addNumbers(1, 1);
@@ -34,8 +34,8 @@
     print('$number1 + $number2 코드 실행 끝');                  //실행순서 2
     ```
 ### 3.3 async와 await
-- async 와 await 키워드를 사용하면 비동기를 유지하면서 코드 가독성을 높일 수 있다.
-- 함수를 async 로 지정해주고 대기하고 싶은 비동기 함수에 await 를 사용한다.
+- `async` 와 `await` 키워드를 사용하면 비동기를 유지하면서 코드 가독성을 높일 수 있다.
+- 함수를 `async` 로 지정해주고 대기하고 싶은 비동기 함수에 `await` 를 사용한다.
     ```dart
     void main() {
         addNumbers(1, 1);
@@ -52,7 +52,7 @@
     }
     ```
 - 비동기 프로그래밍을 유지하며 코드가 작성된 순서대로 실행된다.
-- Future.delayed() 가 실행되며 3초 기다려야 할때 다음 함수가 실행된다.
+- `Future.delayed()` 가 실행되며 3초 기다려야 할때 다음 함수가 실행된다.
     ```dart
     void main() {
         addNumbers(1, 1);
@@ -87,7 +87,7 @@
     }
     ```
 #### 3.3.1 결과값 받기
-- Future 클래스를 이용하여 결과값을 받을 수 있다.
+- `Future` 클래스를 이용하여 결과값을 받을 수 있다.
     ```dart
     void main() async {
         final result = await addNumbers(1, 1);
@@ -109,13 +109,13 @@
     }
     ```
 ### 3.4 Stream
-- Future 는 반환값을 한 번 받아내는 비동기 프로그래밍에 사용.
-- Stream 을 사용하면 지속적으로 값을 반환.
+- `Future` 는 반환값을 한 번 받아내는 비동기 프로그래밍에 사용.
+- `Stream` 을 사용하면 지속적으로 값을 반환.
 
 #### 3.4.1 Stream 기본 사용법
-- dart:async 패키지를 import
-- StreamController 를 listen() 해서 값을 지속적으로 반환.
-- Stream에 값을 주입할 때는 sink.add() 함수를 실행.
+- `dart:async` 패키지를 import
+- `StreamController` 를 `listen()` 해서 값을 지속적으로 반환.
+- `Stream` 에 값을 주입할 때는 `sink.add()` 함수를 실행.
     ```dart
     import 'dart:async';
 
@@ -134,8 +134,8 @@
     }        
     ```
 #### 3.4.2 braodcast Stream
-- Stream 을 여러 번 listen() 할때 사용.
-- add() 를 실행할 때마다 listen() 하는 모든 콜백 함수에 값이 주입된다.
+- `Stream` 을 여러 번 `listen()` 할때 사용.
+- `add()` 를 실행할 때마다 `listen()` 하는 모든 콜백 함수에 값이 주입된다.
     ```dart
     import 'dart:async';
 
@@ -160,10 +160,10 @@
     }     
     ```
 #### 3.4.3 함수로 Stream 반환하기
-- StreamController 대신 Stream 을 반환하는 함수를 사용.
-- Stream 을 반환하는 함수는 async* 로 선언.
-- StreamController 의 add() 처럼 yield 키워드를 이용해서 값 반환.
-- listen() 함수로 콜백 함수 입력
+- `StreamController` 대신 `Stream` 을 반환하는 함수를 사용.
+- `Stream` 을 반환하는 함수는 `async*` 로 선언.
+- `StreamController` 의 `add()` 처럼 `yield` 키워드를 이용해서 값 반환.
+- `listen()` 함수로 콜백 함수 입력
     ```dart
     import 'dart:async';
 
@@ -270,7 +270,7 @@
   
         print('name: $name');
         print('age: $age');
-}
+    }
     ```
 #### 4.2.4 클래스에서의 구조 분해 사용 예제
 - 클래스의 생성자 구조와 똑같이 구조 분해한다.
@@ -396,7 +396,7 @@
 #### 4.4.1 base 제한자
 - 클래스의 기능을 강제하는 제한자.
 - 해당 클래스는 상속만 가능, 외부에서 직접 구현 불가.
-- 자식 클래스는 꼭 base, final, sealed 중 하나의 제한자와 함께 사용해야 한다.
+- 자식 클래스는 꼭 `base`, `final`, `sealed` 중 하나의 제한자와 함께 사용해야 한다.
   - class_modifiers.dart
     ```dart
     base class Parent {
