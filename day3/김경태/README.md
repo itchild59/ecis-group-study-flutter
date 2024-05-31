@@ -420,7 +420,7 @@
     Parent child1 = Parent();
 
     base class Child2 extends Parent {}
-    //class Child3 extends Parent {}        //상속 불가
+    //class Child3 extends Parent {}        //제한자 없이 상속 불가
     //class Child4 implements Parent {}     //재정의 불가
     ```  
 #### 4.4.2 final 제한자
