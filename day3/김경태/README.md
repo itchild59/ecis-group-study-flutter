@@ -37,6 +37,7 @@
 ### 3.3 async와 await
 - `async` 와 `await` 키워드를 사용하면 비동기를 유지하면서 코드 가독성을 높일 수 있다.
 - 함수를 `async` 로 지정해주고 대기하고 싶은 비동기 함수에 `await` 를 사용한다.
+- 비동기 프로그래밍을 유지하며 코드가 작성된 순서대로 실행된다.
     ```dart
     void main() {
         addNumbers(1, 1);
@@ -52,7 +53,6 @@
         print('$number1 + $number2 코드 실행 끝');                   //실행순서 3
     }
     ```
-- 비동기 프로그래밍을 유지하며 코드가 작성된 순서대로 실행된다.
 - `Future.delayed()` 가 실행되며 3초 기다려야 할때 다음 함수가 실행된다.
     ```dart
     void main() {
@@ -88,7 +88,7 @@
     }
     ```
 #### 3.3.1 결과값 받기
-- `Future` 클래스를 이용하여 결과값을 받을 수 있다.
+- `Future` 클래스를 이용하여 `async` 와 `await`를 사용한 함수에서도 결과값을 받을 수 있다.
     ```dart
     void main() async {
         final result = await addNumbers(1, 1);
