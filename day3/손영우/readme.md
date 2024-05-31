@@ -1,3 +1,82 @@
+# Chapter 03. 다트 비동기 프로그래밍
+- 동기 : 요청 후 결과가 나올때까지 기다렸다가 다음 코드로 진행.
+- 비동기 : 요청 후 결과를 기다리지 않고 다음 코드로 진행.
+### Future
+- 다트에서 비동기 처리를 위한 클래스.
+- 지금은 없지만 미래에 요청한 데이터 혹은 에러가 담길 그릇.
+```dart
+void main() {
+
+ print("첫번째 출력");
+ Future.delayed(Duration(seconds: 3),() {
+   print("두번째 출력");
+ });
+ print("세번째 출력");
+
+}
+```
+### async / await
+- Future 를 좀더 유용하게 사용하기 위한 키워드.
+- await 키워드를 사용한 함수는 무조건 async 함수.
+- 비동기 특성을 유지하면서 작성한 순서대로 실행.
+```dart
+Future<int> addTwoNumber(int a, int b) async
+{
+  return a + b;
+}
+
+void main() {
+
+ print("첫번째 출력");
+
+ print("두번째 계산 = ${await addTwoNumber(1, 2)}");
+
+ print("세번째 출력");
+}
+```
+### Stream
+- 지속적으로 값을 반환 받을 때 사용하는 비동기 연산자
+- dart:async 패키지를 참조.
+- StreamController의 liten 함수를 이용하여 값을 지속적으로 반환.
+```dart
+import 'dart:async';
+
+void main() {
+ final controller = StreamController();
+ final stream = controller.stream;
+
+ final streamlisener = stream.listen((val) {
+   print(val);
+ });
+
+ controller.sink.add(1);
+ controller.sink.add(2);
+ controller.sink.add(3);
+}
+```
+### BrodcastStream
+- 하나의 스트림을 생성하고 여러번 listen 함수를 실행.
+```dart
+import 'dart:async';
+
+void main() {
+ final controller = StreamController();
+ final stream = controller.stream.asBroadcastStream();
+
+ final streamlisener1 = stream.listen((val) {
+   print("listening1");
+   print(val);
+ });
+ final streamlisener2 = stream.listen((val) {
+   print("listening2");
+   print(val);
+ });
+
+ controller.sink.add(1);
+ controller.sink.add(2);
+ controller.sink.add(3);
+}
+```
 # Chapter 04. 다트 3.0 신규문법입문하기
 
 ## 레코드
