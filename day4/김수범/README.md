@@ -27,16 +27,16 @@ Canvas 가 HWUI와 SKIA를 이용해서 Surface로 요청
  ## Hello Flutter 앱 만들기
 
  ### VSCode 에서 프로젝트 생성하기
- ![alt text](image.png)
- - 마켓 플레이스 Flutter 설치
+- 마켓 플레이스 Flutter 설치
 
+ ![alt text](image.png)
+
+
+- Ctrl + Shift + p => flutter new project
 
  ![alt text](image-1.png)
- - Ctrl + Shift + p => flutter new project
 
 
-![alt text](image-2.png)
-- 소스 작성 후 실행 하면 디바이스를 선택
  ```dart
 import 'package:flutter/material.dart';
 
@@ -52,6 +52,11 @@ void main() {
   ));
 }
 ```
+
+- 소스 작성 후 실행 하면 디바이스를 선택
+
+![alt text](image-2.png)
+
 - MaterialApp : 머티리얼 디자인 기반의 위젯 사용
 - Scaffold : 화면 전체를 차지하며 레이아웃을 도와주고 UI 관련 특수 기능 제공
 
@@ -168,6 +173,7 @@ Text('원하는 문자열',
       ),
 ```
 ## 제스처 관련 위젯
+- 키보드로 글자를 입력하는 행위 외의 모든 입력을 제스처라 부름
 
 ### 버튼 위젯
 - TextButton : 텍스트만 있는 버튼
