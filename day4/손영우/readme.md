@@ -7,6 +7,7 @@
 - Engine  : C,C++로 만들어져 있는 Flutter 코어 API 계층.
 - Framerowk : 개발자가 구현하는 기능들을 모아놓은 계층.
 
+<img src="https://velog.velcdn.com/images/error/post/9e1f990d-33d9-4287-93b6-1aebd321f1cf/image.png" width="600px" height="400px" title="px(픽셀) 크기 설정" alt=""></img><br/>
 
 ## Hello Flutter 앱 만들기
 ### 안드로이드 스튜디오 기준
