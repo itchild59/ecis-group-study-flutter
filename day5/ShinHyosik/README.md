@@ -37,7 +37,9 @@
 ### 플러그인 추가
 
 - `pubspec.yaml` 파일에서 플러그인, 라이브러리 관리를 하고 있음
+
   ![alt text](image-1.png)
+
 - 플러그인 추가 방법
   - terminal
   - pubspec.yaml
@@ -58,15 +60,15 @@
 1. 콜백
    > 다른 코드의 인수로서 넘겨주는 실행 가능한 코드를 말한다(위키백과)
 
-```dart
-WebviewController controller = WebviewController()
-    ..setNavigationDelegate(
-        // void 타입의 콜백
-        onPageFinished: (String url) {
-            print(url)
-        }
-    );
-```
+    ```dart
+    WebviewController controller = WebviewController()
+        ..setNavigationDelegate(
+            // void 타입의 콜백
+            onPageFinished: (String url) {
+                print(url)
+            }
+        );
+    ```
 
 2. 웹뷰
    - 프레임워크에 내장된 브라우저를 앱의 네이티브 컴포넌트에 임베딩 하는 기능  
@@ -128,50 +130,50 @@ WebviewController controller = WebviewController()
         ||`<uses-permission android:name="android.permission.WRITE_CALENDAR"/>`|
 
       - `http`연결 허용 설정  
-        `https`를 사용한다면 설정 불필요.
-        `xml
-    ...
-    <application
-        android:label="blog_web_app"
-        android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
-        android:usesCleartextTraffic="true"> <!-- android:usesCleartextTraffic="true" 설정 -->
-    ...
-    `
+         `https`를 사용한다면 설정 불필요.
+        ```xml
+          ...
+          <application
+              android:label="blog_web_app"
+              android:name="${applicationName}"
+              android:icon="@mipmap/ic_launcher"
+              android:usesCleartextTraffic="true"> <!-- ndroid:usesCleartextTraffic="true" 설정 -->
+          ...
+        ```
 
    2. iOS 설정
 
-      - 자주 사용하는 iOS 권한
+   - 자주 사용하는 iOS 권한
 
-        | 키값                            | 설명                | 기타                                                                                                                    |
-        | ------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-        | ~~NSCalendarsUsageDescription~~ | 달력사용권한        | **Deprecated** NSCalendarsFullAccessUsageDescription 와 NSCalendarsWriteOnlyAccessUsageDescription 로 구분되어 나뉘어짐 |
-        | NSCameraUsageDescription        | 카메라사용권한      |                                                                                                                         |
-        | NSContactsUsageDescription      | 연락처사용권한      |                                                                                                                         |
-        | NSLocationUsageDescription      | 위치정보사용권한    |                                                                                                                         |
-        | NSPhotoLibraryUsageDescription  | 사진접근권한        |                                                                                                                         |
-        | NSFaceIDUsageDescription        | Face Id 접근권한    |                                                                                                                         |
-        | NSMicrophoneUsageDescription    | 마이크 접근권한     |                                                                                                                         |
-        | NSMotionUsageDescription        | 가속도센서 접근권한 |                                                                                                                         |
-        | NSSiriUsageDescription          | 시리 접근권한       |                                                                                                                         |
+     | 키값                            | 설명                | 기타                                                                                                                    |
+     | ------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+     | ~~NSCalendarsUsageDescription~~ | 달력사용권한        | **Deprecated** NSCalendarsFullAccessUsageDescription 와 NSCalendarsWriteOnlyAccessUsageDescription 로 구분되어 나뉘어짐 |
+     | NSCameraUsageDescription        | 카메라사용권한      |                                                                                                                         |
+     | NSContactsUsageDescription      | 연락처사용권한      |                                                                                                                         |
+     | NSLocationUsageDescription      | 위치정보사용권한    |                                                                                                                         |
+     | NSPhotoLibraryUsageDescription  | 사진접근권한        |                                                                                                                         |
+     | NSFaceIDUsageDescription        | Face Id 접근권한    |                                                                                                                         |
+     | NSMicrophoneUsageDescription    | 마이크 접근권한     |                                                                                                                         |
+     | NSMotionUsageDescription        | 가속도센서 접근권한 |                                                                                                                         |
+     | NSSiriUsageDescription          | 시리 접근권한       |                                                                                                                         |
 
-      - `Info.plist` 설정
+   - `Info.plist` 설정
 
-        ```plist
-        ...
-        <dict>
-            <key>NSAppTransportSecurity</key>
-            <dict>
-                <key>NSAllowsLocalNetworking</key>
-                <true />
-                <key>NSAllowsArbitraryLoadsInWebContent</key>
-                <true />
-            </dict>
-        </dict>
-        ...
-        ```
+     ```plist
+     ...
+     <dict>
+         <key>NSAppTransportSecurity</key>
+         <dict>
+             <key>NSAllowsLocalNetworking</key>
+             <true />
+             <key>NSAllowsArbitraryLoadsInWebContent</key>
+             <true />
+         </dict>
+     </dict>
+     ...
+     ```
 
-      - 실행중 필요한 권한은 디버그 메세지로 표시 되기 때문에 확인 후 추가해도됨.
+   - 실행중 필요한 권한은 디버그 메세지로 표시 되기 때문에 확인 후 추가해도됨.
 
 ### 프로젝트 초기화
 
